@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:orientation="vertical"
+android:background="#FFEEE8AA"
+android:layout_width="match_parent"
+tools:context="com.manzana.rde.asimplecountdowntimer.TimerMainActivity"
+android:layout_height="match_parent">
+
+<TableLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="0,1,2"
+    android:layout_gravity="center">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dip"
+        android:orientation="horizontal">
+        <Button
+            android:text="10 Hour"
+            android:id="@+id/btn10Hour"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:layout_height="81dp"
+            android:layout_width="90dp"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:layout_gravity="center"
+            android:layout_span="1">
+
+        </Button>
+
+
+        <Button
+            android:text="10 min"
+            android:id="@+id/btn10Min"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:layout_height="81dp"
+            android:layout_width="90dp"
+            android:layout_gravity="center"
+            android:layout_span="1">
+
+        </Button>
+
+        <Button
+            android:text="10 Sec"
+            android:id="@+id/btn10Sec"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:layout_height="81dp"
+            android:layout_width="90dp"
+            android:shadowRadius="5"
+            android:layout_gravity="center"
+            android:layout_span="1">
+
+        </Button>
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:gravity="center">
+        <Button
+            android:text="1 Hour"
+            android:id="@+id/btn1Hour"
+            android:textColor="#FFFFFF"
+            android:layout_height="81dp"
+            android:layout_width="90dp"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:layout_gravity="center"
+            android:layout_span="1">
+
+        </Button>
+        <Button
+            android:text="1 min"
+            android:id="@+id/btn1Min"
+            android:textColor="#FFFFFF"
+            android:layout_height="81dp"
+            android:layout_width="90dp"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:layout_span="1"
+            android:layout_gravity="center"
+            android:shadowRadius="5">
+
+        </Button>
+        <Button
+            android:text="1 Sec"
+            android:id="@+id/btn1Sec"
+            android:textColor="#FFFFFF"
+            android:layout_height="81dp"
+            android:layout_width="90dp"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:layout_gravity="center"
+            android:layout_span="1">
+
+        </Button>
+
+    </TableRow>
+
+
+
+</TableLayout>
+
+
+
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/lRight">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="00:00:00"
+        android:id="@+id/tvTime"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="#ff090909"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:textAllCaps="true" />
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1"
+        android:layout_gravity="center_horizontal">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <Button
+                android:id="@+id/btnStart"
+                android:text="@string/Start"
+                android:onClick="startChronometer"
+                android:textColor="#FFFFFF"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@drawable/buttonshape"
+                android:shadowColor="#A8A8A8"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/btnReset"
+                android:text="@string/Reset"
+                android:onClick="stopChronometer"
+                android:textColor="#FFFFFF"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@drawable/buttonshape"
+                android:shadowColor="#A8A8A8"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:layout_gravity="center"
+                android:layout_span="1"/>
+
+        </TableRow>
+
+
+    </TableLayout>
+
+
+</LinearLayout>
+
+
+</LinearLayout>
