@@ -14,7 +14,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -26,7 +26,7 @@ import android.content.Context;
 import android.widget.Toast;
 
 
-public class DialogActivity extends ActionBarActivity {
+public class DialogActivity extends AppCompatActivity {
     Uri notification = null;
     public static final int A_DIALOG = 1;
     private Ringtone r;
