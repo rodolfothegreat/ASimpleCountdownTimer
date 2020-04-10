@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 29
     buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "com.manzana.rde.asimplecountdowntimer"
-        minSdkVersion 17
-        targetSdkVersion 27
+        minSdkVersion 22
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
     }
@@ -18,6 +18,10 @@ android {
     }
     productFlavors {
     }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
 }
 
 repositories {
@@ -27,6 +31,6 @@ repositories {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:27.0.0'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
 }

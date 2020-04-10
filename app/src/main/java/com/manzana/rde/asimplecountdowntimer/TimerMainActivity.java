@@ -12,7 +12,7 @@ import android.graphics.Rect;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.SystemClock;
-import android.support.v7.app.AppCompatActivity ;
+import androidx.appcompat.app.AppCompatActivity ;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
@@ -276,18 +276,14 @@ public class TimerMainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onActivityResult(final int requestCode, final int resultCode, final Intent intent)
-    {
-        if (resultCode == Activity.RESULT_OK && requestCode == 5)
-        {
+    protected void onActivityResult(final int requestCode, final int resultCode, final Intent intent) {
+        super.onActivityResult(requestCode, resultCode, intent);
+        if (resultCode == Activity.RESULT_OK && requestCode == 5) {
             Uri uri = intent.getParcelableExtra(RingtoneManager.EXTRA_RINGTONE_PICKED_URI);
 
-            if (uri != null)
-            {
+            if (uri != null) {
                 this.chosenRingtone = uri.toString();
-            }
-            else
-            {
+            } else {
                 this.chosenRingtone = "";
             }
 
@@ -300,7 +296,7 @@ public class TimerMainActivity extends AppCompatActivity {
 
         }
 
-        if ((this.initTime + this.interval < SystemClock.elapsedRealtime() ) && (amRunning)) {
+        if ((this.initTime + this.interval < SystemClock.elapsedRealtime()) && (amRunning)) {
             amRunning = false;
             this.btnStart.setText("Start");
             this.btnReset.setText("Reset");
